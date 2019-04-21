@@ -33,8 +33,6 @@ function timezoneCalc() {
         console.log(finalDiff);
 
         for (let i = 1; i < webinarSecondCol.length; i++) {
-            let inputDiff;
-
             webinarSecondCol[i].innerHTML = new Date(finalDiff);
         }
 
