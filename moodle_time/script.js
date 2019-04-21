@@ -30,9 +30,7 @@ function timezoneCalc() {
         finalDiff = finalDiff + timezoneDiff;
 
         // Add the updated values to the second column
-        for (let j = 1; j < webinarSecondCol.length; j++) {            
-            webinarSecondCol[j].innerHTML = new Date(finalDiff);
-        }
+        webinarSecondCol[i].innerHTML = new Date(finalDiff);
 
     }
 
