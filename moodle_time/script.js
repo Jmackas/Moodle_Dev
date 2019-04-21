@@ -2,8 +2,6 @@
 timezoneCalc();
 
 function timezoneCalc() {
-    let webinarTable = document.querySelectorAll("#webinartable td");
-
     // Detect all instances of the time zone in the first column
     let webinarFirstCol = document.querySelectorAll("#webinartable td:nth-of-type(1)");
 
