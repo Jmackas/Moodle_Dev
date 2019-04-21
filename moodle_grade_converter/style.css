@@ -1,0 +1,12 @@
+/* The purpose of this pen is to see if the logic would be possible to automatically set either a fail or pass grade for a list of grades on Moodle. This logic would need to be implemented for the Attendance */
+#page-header-wrapper {
+    background-color: red !important;
+}
+
+.extensionButton {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+}
+
