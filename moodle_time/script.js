@@ -33,18 +33,16 @@ function timezoneCalc() {
         // Update the values in the first column 
         webinarFirstCol[i].innerHTML = new Date(webinarFirstCol[i].innerHTML);
 
-        
+    }
+
+    // Loop through all values to remove the Timezone
+    for (let i = 1; i < webinarFirstCol.length; i++) {
+        let firstColOverwrite = webinarFirstCol[i].innerHTML;
+        webinarFirstCol[i].innerHTML = firstColOverwrite.split('GMT')[0];
+
+        let secondColOverwrite = webinarSecondCol[i].innerHTML;
+        webinarSecondCol[i].innerHTML = secondColOverwrite.split('GMT')[0];
 
     }
 
 }
-
-
-
-/*
-var s = 'Wed Jul 19 2017 14:28:00 GMT+0800 (Australian Western Standard Time)';
-s = s.substring(0, s.indexOf('GMT'));
-document.write(s);
-
-
-*/
