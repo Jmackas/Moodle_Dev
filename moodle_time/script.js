@@ -13,8 +13,8 @@ function timezoneCalc() {
     // Find user timezone
     let timezoneDiff = new Date().getTimezoneOffset();
 
-    // Convert to hours
-    timezoneDiff = Math.abs(timezoneDiff / 60);
+    // Convert to hours (-1 is the additive inverse)
+    timezoneDiff = (timezoneDiff / 60) * -1;
 
     // Convert to epoch
     timezoneDiff = timezoneDiff * 3600000;
