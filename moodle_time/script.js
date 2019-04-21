@@ -4,7 +4,7 @@ timezoneCalc();
 
 function timezoneCalc() {
   let webinarTable = document.querySelectorAll("#webinartable td");
-  
+
   // Detect all instances of the time zone in the first column
   let webinarFirstCol = document.querySelectorAll("#webinartable td:nth-of-type(1)");
 
@@ -30,10 +30,9 @@ function timezoneCalc() {
     // Add the timezone difference
     finalDiff = finalDiff + timezoneDiff;
 
- //   webinarFirstCol[i].innerHTML + new Date(finalDiff).innerHTML;
-    
+    //   webinarFirstCol[i].innerHTML + new Date(finalDiff).innerHTML;
     console.log(finalDiff);
 
-  
+
   }
 }
