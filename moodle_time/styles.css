@@ -1,0 +1,8 @@
+table#webinartable tr:nth-of-type(1) {
+    font-weight: bold;
+}
+
+table#webinartable td {
+    border: 1px solid black;
+    padding: 10px;
+}
