@@ -29,9 +29,6 @@ function timezoneCalc() {
         // Add the timezone difference
         finalDiff = finalDiff + timezoneDiff;
 
-        //   webinarFirstCol[i].innerHTML + new Date(finalDiff).innerHTML;
-        console.log(finalDiff);
-
         for (let i = 1; i < webinarSecondCol.length; i++) {
             webinarSecondCol[i].innerHTML = new Date(finalDiff);
         }
