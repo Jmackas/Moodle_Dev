@@ -37,9 +37,11 @@ function timezoneCalc() {
 
     // Loop through all values to remove the Timezone
     for (let i = 1; i < webinarFirstCol.length; i++) {
+        // Loop through first column
         let firstColOverwrite = webinarFirstCol[i].innerHTML;
         webinarFirstCol[i].innerHTML = firstColOverwrite.split('GMT')[0];
 
+        // Loop through second column
         let secondColOverwrite = webinarSecondCol[i].innerHTML;
         webinarSecondCol[i].innerHTML = secondColOverwrite.split('GMT')[0];
 
