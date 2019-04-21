@@ -1,5 +1,4 @@
 // Function invocations
-
 timezoneCalc();
 
 function timezoneCalc() {
