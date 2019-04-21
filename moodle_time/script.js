@@ -29,7 +29,7 @@ function timezoneCalc() {
         // Add the timezone difference
         finalDiff = finalDiff + timezoneDiff;
 
-        // Add the updated values to the second column
+        // Add the updated values to the second column and convert to a normal date
         webinarSecondCol[i].innerHTML = new Date(finalDiff);
 
     }
