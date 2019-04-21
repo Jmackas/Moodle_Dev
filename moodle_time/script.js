@@ -32,6 +32,19 @@ function timezoneCalc() {
 
         // Update the values in the first column 
         webinarFirstCol[i].innerHTML = new Date(webinarFirstCol[i].innerHTML);
+
+        
+
     }
 
 }
+
+
+
+/*
+var s = 'Wed Jul 19 2017 14:28:00 GMT+0800 (Australian Western Standard Time)';
+s = s.substring(0, s.indexOf('GMT'));
+document.write(s);
+
+
+*/
