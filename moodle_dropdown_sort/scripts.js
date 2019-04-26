@@ -1,9 +1,17 @@
 invokeSort();
 
+// Check if the grades module is active
 function invokeSort() {
-    sortlist();
+    // Fetching grade page
+    let gradePageCheck = document.getElementById("page-grade-report-overview-index");
+
+    // Check if user is on grade page
+    if (gradePageCheck !== null) {
+        sortlist();
+    }
 }
 
+// Sort function
 function sortlist() {
 
     var cl = document.querySelector('[name="userid"]');
