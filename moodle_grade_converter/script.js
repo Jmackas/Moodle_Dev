@@ -10,13 +10,9 @@ function extensionInterface() {
   // Check if user is on grade page
   if (gradePageCheck !== null) {
     // Button to commence the grade corrector algorithm
-    document.write(
-      "<button onclick='confirmationCheck()' class='extensionButton'>Check Fields to be Changed</button>"
-    );
-
-    document.write(
-      "<button onclick='gradeCorrector()' class='extensionButton' style='top: 40px;' >Overwrite Changes</button>"
-    );
+    
+    let entireDoc = document.querySelector('body');
+    entireDoc.insertAdjacentHTML('beforebegin', '<button onclick="confirmationCheck()" class="extensionButton">Check Fields to be Changed</button> <br> <button onclick="gradeCorrector()" class="extensionButton" style="top: 40px;" >Overwrite Changes</button>');
   }
 }
 
