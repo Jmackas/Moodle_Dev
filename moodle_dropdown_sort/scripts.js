@@ -7,12 +7,16 @@ function invokeSort() {
 
     // Check if user is on grade page
     if (gradePageCheck !== null) {
-        sortlist();
+        let entireDoc = document.getElementById('graded_users_selector');
+        entireDoc.insertAdjacentHTML('afterend', '<button onclick="sortListAlph()" class="bttn">Sort First Name</button>');
+        entireDoc.insertAdjacentHTML('afterend', '<br>');
+
+        //sortlist();
     }
 }
 
 // Sort function
-function sortlist() {
+function sortListAlph() {
 
     var cl = document.querySelector('[name="userid"]');
     var clTexts = new Array();
