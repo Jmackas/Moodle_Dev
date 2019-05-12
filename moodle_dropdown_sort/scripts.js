@@ -1,3 +1,5 @@
+// Scripts developed from https://stackoverflow.com/questions/5248189/sort-select-menu-alphabetically/5248918#5248918
+
 invokeSort();
 
 // Check if the grades module is active
