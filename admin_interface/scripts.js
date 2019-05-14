@@ -1,6 +1,6 @@
 detectUser();
 
-// Detect the 
+// Detect the user and invoke admin control options
 function detectUser() {
     // Detect user's name
     let userName = document.querySelector(".usermendrop").innerText;
