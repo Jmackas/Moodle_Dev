@@ -21,6 +21,9 @@ function detectUser() {
 function activateAdmin() {
     // Confirm activation of admin mode and save to web storage
     localStorage.setItem("Moodle Admin Mode", "Activated");
-
+    
     console.log("worked!");
 }
+
+
+//    console.log(localStorage.getItem("Moodle Admin Mode"));
