@@ -1,8 +1,7 @@
-
 detectUser();
 
 // Detect the 
-function detectUser () {
+function detectUser() {
     // Detect user's name
     let userName = document.querySelector(".usermendrop").innerText;
 
@@ -10,15 +9,18 @@ function detectUser () {
     var managers = ["James Mackay ", "Natalie Deng"];
 
     // If the user is in the following array
-     if (managers.includes(userName) == true) {
+    if (managers.includes(userName) == true) {
         // Insert button for user if manager
         let targettedNode = document.querySelector("ul.dropdown-menu.usermen");
         targettedNode.insertAdjacentHTML('beforeend', '<li><button onclick="activateAdmin()">Activate Admin Mode</button></li>');
-    } 
-    
+    }
+
 }
 
 // Activate admin mode
 function activateAdmin() {
+    // Confirm activation of admin mode and save to web storage
+    localStorage.setItem("Moodle Admin Mode", "Activated");
+
     console.log("worked!");
 }
