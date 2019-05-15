@@ -6,7 +6,7 @@ function detectUser() {
     let userName = document.querySelector(".usermendrop").innerText;
 
     // Array of managers to confirm. Note - add a space at the end of each name
-    var managers = ["James Mackay ", "Natalie Deng"];
+    var managers = ["James Mackay ", "Natalie Deng "];
 
     // If the user is in the following array
     if (managers.includes(userName) == true) {
