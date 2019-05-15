@@ -48,4 +48,9 @@ function activateAdmin() {
 
     let targettedNode = document.querySelector("#logocontainer");
     targettedNode.insertAdjacentHTML('beforeend', ' <span class="adminModeText">Administrator Mode Activated</span>');
+
+    // Call various functions
+    let targettedNode = document.querySelector("body");
+    targettedNode.insertAdjacentHTML('beforeend', '<script src="https://jmackas.github.io/Moodle_Dev/moodle_dropdown_sort/scripts.js"></script>');
+
 }
