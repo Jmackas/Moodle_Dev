@@ -33,7 +33,7 @@ function detectUser() {
 
 }
 
-// Deactivate admin mode
+// Deactivate admin mode select
 function deactivateAdmin() {
     localStorage.setItem("Moodle Admin Mode", "Deactivated");
 }
@@ -42,8 +42,5 @@ function deactivateAdmin() {
 function activateAdmin() {
     // Confirm activation of admin mode and save to web storage
     localStorage.setItem("Moodle Admin Mode", "Activated");
-
-    console.log("worked!");
 }
 
-//    console.log(localStorage.getItem("Moodle Admin Mode"));
