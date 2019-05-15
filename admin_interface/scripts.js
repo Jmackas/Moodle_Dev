@@ -51,6 +51,6 @@ function activateAdmin() {
 
     // Call various functions
     let targettedNodeTwo = document.querySelector("body");
-    targettedNode.insertAdjacentHTML('beforeend', '<script src="https://jmackas.github.io/Moodle_Dev/moodle_dropdown_sort/scripts.js"></script> <script src="https://jmackas.github.io/Moodle_Dev/moodle_grade_converter/script.js"></script>');
+    targettedNodeTwo.insertAdjacentHTML('beforeend', '<script src="https://jmackas.github.io/Moodle_Dev/moodle_dropdown_sort/scripts.js"></script> <script src="https://jmackas.github.io/Moodle_Dev/moodle_grade_converter/script.js"></script>');
 
 }
