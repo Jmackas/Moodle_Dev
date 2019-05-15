@@ -10,20 +10,40 @@ function detectUser() {
 
     // If the user is in the following array
     if (managers.includes(userName) == true) {
+        // Check local storage to check if admin mode had been activated
+        if (localStorage.getItem("Moodle Admin Mode") == "Activated") {
+            // Activate admin mode
+            activateAdmin()
+
+            // Option to turn admin mode off
+            let targettedNode = document.querySelector("ul.dropdown-menu.usermen");
+            targettedNode.insertAdjacentHTML('beforeend', '<li><button onclick="deactivateAdmin()">Deactivate Admin Mode</button></li>');
+        }
+
+        if (localStorage.getItem("Moodle Admin Mode") == "Deactivated") {
+
+            // Option to turn admin mode off
+            let targettedNodeTwo = document.querySelector("ul.dropdown-menu.usermen");
+            targettedNodeTwo.insertAdjacentHTML('beforeend', '<li><button onclick="activateAdmin()">Acivate Admin Mode</button></li>');
+        }
+
         // Insert button for user if manager
-        let targettedNode = document.querySelector("ul.dropdown-menu.usermen");
-        targettedNode.insertAdjacentHTML('beforeend', '<li><button onclick="activateAdmin()">Activate Admin Mode</button></li>');
+
     }
 
+}
+
+// Deactivate admin mode
+function deactivateAdmin() {
+    localStorage.setItem("Moodle Admin Mode", "Deactivated");
 }
 
 // Activate admin mode
 function activateAdmin() {
     // Confirm activation of admin mode and save to web storage
     localStorage.setItem("Moodle Admin Mode", "Activated");
-    
+
     console.log("worked!");
 }
-
 
 //    console.log(localStorage.getItem("Moodle Admin Mode"));
