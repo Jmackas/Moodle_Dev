@@ -1,4 +1,12 @@
+importScripts();
 detectUser();
+
+// Import relevant scripts
+function importScripts() {
+    // Call various functions
+    let targettedNodeTwo = document.querySelector("body");
+    targettedNodeTwo.insertAdjacentHTML('beforeend', '<script src="https://jmackas.github.io/Moodle_Dev/moodle_dropdown_sort/scripts.js"></script> <script src="https://jmackas.github.io/Moodle_Dev/moodle_grade_converter/script.js"></script>');
+}
 
 // Detect the user and invoke admin control options
 function detectUser() {
@@ -48,9 +56,5 @@ function activateAdmin() {
 
     let targettedNode = document.querySelector("#logocontainer");
     targettedNode.insertAdjacentHTML('beforeend', ' <span class="adminModeText">Administrator Mode Activated</span>');
-
-    // Call various functions
-    let targettedNodeTwo = document.querySelector("body");
-    targettedNodeTwo.insertAdjacentHTML('beforeend', '<script src="https://jmackas.github.io/Moodle_Dev/moodle_dropdown_sort/scripts.js"></script> <script src="https://jmackas.github.io/Moodle_Dev/moodle_grade_converter/script.js"></script>');
 
 }
