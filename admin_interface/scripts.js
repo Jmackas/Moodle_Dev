@@ -36,11 +36,16 @@ function detectUser() {
 // Deactivate admin mode select
 function deactivateAdmin() {
     localStorage.setItem("Moodle Admin Mode", "Deactivated");
+
+    // Refresh required to deactivate admin
+    window.location.reload();
 }
 
 // Activate admin mode
 function activateAdmin() {
     // Confirm activation of admin mode and save to web storage
     localStorage.setItem("Moodle Admin Mode", "Activated");
-}
 
+    let targettedNode = document.querySelector("#logocontainer");
+    targettedNode.insertAdjacentHTML('beforeend', ' <span class="adminModeText">Administrator Mode Activated</span>');
+}
