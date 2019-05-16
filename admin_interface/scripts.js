@@ -1,12 +1,6 @@
-// importScripts();
 detectUser();
 
-// Import relevant scripts
-function importScripts() {
-    // Call various functions
-    let targettedNodeTwo = document.querySelector("body");
-    targettedNodeTwo.insertAdjacentHTML('beforeend', '<script src="https://jmackas.github.io/Moodle_Dev/moodle_dropdown_sort/scripts.js"></script> <script src="https://jmackas.github.io/Moodle_Dev/moodle_grade_converter/script.js"></script>');
-}
+
 
 // Detect the user and invoke admin control options
 function detectUser() {
@@ -20,6 +14,9 @@ function detectUser() {
     if (managers.includes(userName) == true) {
         // Check local storage to check if admin mode had been activated
         if (localStorage.getItem("Moodle Admin Mode") == "Activated") {
+            // Pre-load grade scripts
+            importGradeScripts()
+
             // Activate admin mode
             activateAdmin()
 
@@ -27,7 +24,7 @@ function detectUser() {
             let targettedNode = document.querySelector("ul.dropdown-menu.usermen");
             targettedNode.insertAdjacentHTML('beforeend', '<li><button onclick="deactivateAdmin()">Deactivate Admin Mode</button></li>');
         }
-        
+
         // If local storage deactivated or not set yet
         if (localStorage.getItem("Moodle Admin Mode") == "Deactivated" || localStorage.getItem("Moodle Admin Mode") == null) {
 
@@ -54,8 +51,26 @@ function deactivateAdmin() {
 function activateAdmin() {
     // Confirm activation of admin mode and save to web storage
     localStorage.setItem("Moodle Admin Mode", "Activated");
+
+    // Refresh required to activate admin
+    window.location.reload();
+    
     // Note stating it is admin mode
     let targettedNode = document.querySelector("#logocontainer");
     targettedNode.insertAdjacentHTML('beforeend', ' <span class="adminModeText">Administrator Mode Activated</span>');
+
+
+}
+
+
+
+
+// Import relevant scripts
+function importGradeScripts() {
+    // Call various functions
+    var gradeScript = document.createElement('script');
+    gradeScript.src = 'https://jmackas.github.io/Moodle_Dev/moodle_grade_converter/script.js';
+    gradeScript.type = 'text/javascript';
+    document.getElementsByTagName('body')[0].appendChild(gradeScript);
 
 }
