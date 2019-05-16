@@ -1,4 +1,4 @@
-importScripts();
+// importScripts();
 detectUser();
 
 // Import relevant scripts
@@ -27,8 +27,9 @@ function detectUser() {
             let targettedNode = document.querySelector("ul.dropdown-menu.usermen");
             targettedNode.insertAdjacentHTML('beforeend', '<li><button onclick="deactivateAdmin()">Deactivate Admin Mode</button></li>');
         }
-
-        if (localStorage.getItem("Moodle Admin Mode") == "Deactivated") {
+        
+        // If local storage deactivated or not set yet
+        if (localStorage.getItem("Moodle Admin Mode") == "Deactivated" || localStorage.getItem("Moodle Admin Mode") == null) {
 
             // Option to turn admin mode off
             let targettedNodeTwo = document.querySelector("ul.dropdown-menu.usermen");
