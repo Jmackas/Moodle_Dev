@@ -33,8 +33,6 @@ function detectUser() {
             targettedNodeTwo.insertAdjacentHTML('beforeend', '<li><button onclick="activateAdmin()">Acivate Admin Mode</button></li>');
         }
 
-        // Insert button for user if manager
-
     }
 
 }
