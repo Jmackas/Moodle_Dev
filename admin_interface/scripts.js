@@ -70,3 +70,26 @@ function importGradeScripts() {
     document.getElementsByTagName('body')[0].appendChild(gradeScript);
 
 }
+
+
+
+
+/*
+
+TRY AJAX
+
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("maincontent").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "https://jmackas.github.io/Scope-Systems/", true);
+  xhttp.send();
+}
+
+
+
+*/
