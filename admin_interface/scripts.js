@@ -20,11 +20,11 @@ function detectUser() {
 
             // Option to turn admin mode off
             let targettedNode = document.querySelector(".block_myprofile");
-            targettedNode.insertAdjacentHTML('beforeend', '<button onclick="deactivateAdmin()">Deactivate Admin Mode</button>');
+            targettedNode.insertAdjacentHTML('beforeend', '<button onclick="deactivateAdmin()">Deactivate the Dom</button>');
         }
 
         // If local storage deactivated or not set yet
-        if (localStorage.getItem("Moodle Admin Mode") == "Deactivated" || localStorage.getItem("Moodle Admin Mode") == null) {
+        if (localStorage.getItem("Moodle Admin Mode") == "Deactivated" || localStorage.getItem("Activate the Dom") == null) {
 
             // Option to turn admin mode off
             let targettedNodeTwo = document.querySelector(".block_myprofile");
