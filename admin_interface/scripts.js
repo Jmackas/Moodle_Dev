@@ -24,11 +24,11 @@ function detectUser() {
         }
 
         // If local storage deactivated or not set yet
-        if (localStorage.getItem("Moodle Admin Mode") == "Deactivated" || localStorage.getItem("Activate the Dom") == null) {
+        if (localStorage.getItem("Moodle Admin Mode") == "Deactivated" || localStorage.getItem("Moodle Admin Mode") == null) {
 
             // Option to turn admin mode off
             let targettedNodeTwo = document.querySelector(".block_myprofile");
-            targettedNodeTwo.insertAdjacentHTML('beforeend', '<button onclick="activateAdmin()">Activate Admin Mode</button>');
+            targettedNodeTwo.insertAdjacentHTML('beforeend', '<button onclick="activateAdmin()">Activate the Dom</button>');
         }
 
     }
@@ -57,7 +57,7 @@ function activateAdmin() {
 
     // Note stating it is admin mode
     let targettedNode = document.querySelector("#logocontainer");
-    targettedNode.insertAdjacentHTML('beforeend', ' <span class="adminModeText">Administrator Mode Activated</span>');
+    targettedNode.insertAdjacentHTML('beforeend', ' <span class="adminModeText">Dom Mode Activated</span>');
 
 }
 
