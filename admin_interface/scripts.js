@@ -51,7 +51,7 @@ function activateAdmin() {
     localStorage.setItem("Moodle Admin Mode", "Activated");
 
     // Refresh required to activate admin
-    window.location.reload();
+   //  window.location.reload();
     
     // Note stating it is admin mode
     let targettedNode = document.querySelector("#logocontainer");
