@@ -21,16 +21,16 @@ function detectUser() {
             activateAdmin()
 
             // Option to turn admin mode off
-            let targettedNode = document.querySelector("ul.dropdown-menu.usermen");
-            targettedNode.insertAdjacentHTML('beforeend', '<li><button onclick="deactivateAdmin()">Deactivate Admin Mode</button></li>');
+            let targettedNode = document.querySelector(".block_myprofile");
+            targettedNode.insertAdjacentHTML('beforeend', '<button onclick="deactivateAdmin()">Deactivate Admin Mode</button>');
         }
 
         // If local storage deactivated or not set yet
         if (localStorage.getItem("Moodle Admin Mode") == "Deactivated" || localStorage.getItem("Moodle Admin Mode") == null) {
 
             // Option to turn admin mode off
-            let targettedNodeTwo = document.querySelector("ul.dropdown-menu.usermen");
-            targettedNodeTwo.insertAdjacentHTML('beforeend', '<li><button onclick="activateAdmin()">Acivate Admin Mode</button></li>');
+            let targettedNodeTwo = document.querySelector(".block_myprofile");
+            targettedNodeTwo.insertAdjacentHTML('beforeend', '<button onclick="activateAdmin()">Activate Admin Mode</button>');
         }
 
     }
