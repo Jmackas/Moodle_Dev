@@ -1,7 +1,5 @@
 detectUser();
 
-
-
 // Detect the user and invoke admin control options
 function detectUser() {
     // Detect user's name
@@ -15,10 +13,10 @@ function detectUser() {
         // Check local storage to check if admin mode had been activated
         if (localStorage.getItem("Moodle Admin Mode") == "Activated") {
             // Pre-load grade scripts
-            importGradeScripts()
+            importGradeScripts();
 
             // Activate admin mode
-            activateAdmin()
+            activateAdmin();
 
             // Option to turn admin mode off
             let targettedNode = document.querySelector(".block_myprofile");
@@ -51,17 +49,17 @@ function activateAdmin() {
     localStorage.setItem("Moodle Admin Mode", "Activated");
 
     // Refresh required to activate admin
-   //  window.location.reload();
-    
+    //  window.location.reload();
+
+    // Temp stylesheet
+    let targettedNodeTwo = document.querySelector("body");
+    targettedNodeTwo.insertAdjacentHTML('afterend', ' <style>header#page-header-wrapper {background: linear-gradient(to right, #490f59, #a9224f);}.adminModeText{font-weight:bold;}</style>');
+
     // Note stating it is admin mode
     let targettedNode = document.querySelector("#logocontainer");
     targettedNode.insertAdjacentHTML('beforeend', ' <span class="adminModeText">Administrator Mode Activated</span>');
 
-
 }
-
-
-
 
 // Import relevant scripts
 function importGradeScripts() {
