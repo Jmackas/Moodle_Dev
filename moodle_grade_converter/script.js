@@ -2,11 +2,6 @@
 extensionInterface();
 
 function extensionInterface() {
-    // Detect course title
-    let titleDetect = document.querySelector("#sitetitle").innerHTML;
-    // Detect if title has the following string
-    let specCourse = titleDetect.includes("HE Moodle");
-
     // If the title is true
     if (specCourse == true) {
         // Fetching grade page
