@@ -12,8 +12,6 @@ function detectUser() {
     if (managers.includes(userName) == true) {
         // Check local storage to check if admin mode had been activated
         if (localStorage.getItem("Moodle Admin Mode") == "Activated") {
-            // Pre-load grade scripts
-            importGradeScripts();
 
             // Activate admin mode
             adminModeScripts();
@@ -54,14 +52,17 @@ function activateAdmin() {
 }
 
 function adminModeScripts() {
-    
+
     // Temp stylesheet
     let targettedNodeTwo = document.querySelector("body");
     targettedNodeTwo.insertAdjacentHTML('afterend', ' <style>header#page-header-wrapper {background: linear-gradient(to right, #490f59, #a9224f);}.adminModeText{font-weight:bold;}</style>');
 
     // Note stating it is admin mode
     let targettedNode = document.querySelector("#logocontainer");
-    targettedNode.insertAdjacentHTML('beforeend', ' <span class="adminModeText">Dom Mode Activated</span>');
+   targettedNode.insertAdjacentHTML('beforeend', ' <span class="adminModeText">Dom Mode Activated</span>');
+
+    // Pre-load grade scripts
+    importGradeScripts();
 }
 
 // Import relevant scripts
@@ -73,9 +74,6 @@ function importGradeScripts() {
     document.getElementsByTagName('body')[0].appendChild(gradeScript);
 
 }
-
-
-
 
 /*
 
