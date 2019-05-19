@@ -16,7 +16,7 @@ function detectUser() {
             importGradeScripts();
 
             // Activate admin mode
-            activateAdmin();
+            adminModeScripts();
 
             // Option to turn admin mode off
             let targettedNode = document.querySelector(".block_myprofile");
@@ -49,8 +49,12 @@ function activateAdmin() {
     localStorage.setItem("Moodle Admin Mode", "Activated");
 
     // Refresh required to activate admin
-    //  window.location.reload();
+    window.location.reload();
 
+}
+
+function adminModeScripts() {
+    
     // Temp stylesheet
     let targettedNodeTwo = document.querySelector("body");
     targettedNodeTwo.insertAdjacentHTML('afterend', ' <style>header#page-header-wrapper {background: linear-gradient(to right, #490f59, #a9224f);}.adminModeText{font-weight:bold;}</style>');
@@ -58,7 +62,6 @@ function activateAdmin() {
     // Note stating it is admin mode
     let targettedNode = document.querySelector("#logocontainer");
     targettedNode.insertAdjacentHTML('beforeend', ' <span class="adminModeText">Dom Mode Activated</span>');
-
 }
 
 // Import relevant scripts
