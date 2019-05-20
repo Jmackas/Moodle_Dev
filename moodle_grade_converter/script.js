@@ -2,8 +2,6 @@
 extensionInterface();
 
 function extensionInterface() {
-    // If the title is true
-    if (specCourse == true) {
         // Fetching grade page
         let gradePageCheck = document.getElementById("page-grade-report-singleview-index");
 
@@ -14,7 +12,6 @@ function extensionInterface() {
             let entireDoc = document.querySelector('body');
             entireDoc.insertAdjacentHTML('beforebegin', '<button onclick="confirmationCheck()" class="extensionButton">Check Fields to be Changed</button> <br> <button onclick="gradeCorrector()" class="extensionButton" style="top: 40px;" >Overwrite Changes</button>');
         }
-    }
 
 }
 
