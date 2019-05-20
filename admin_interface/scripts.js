@@ -18,7 +18,7 @@ function detectUser() {
 
             // Option to turn admin mode off
             let targettedNode = document.querySelector(".usermen li");
-            targettedNode.insertAdjacentHTML('beforeend', '<button onclick="deactivateAdmin()">Deactivate the Dom</button>');
+            targettedNode.insertAdjacentHTML('beforeend', '<button onclick="deactivateAdmin()" class="domAdmin">Deactivate the Dom</button>');
         }
 
         // If local storage deactivated or not set yet
@@ -55,7 +55,7 @@ function adminModeScripts() {
 
     // Temp stylesheet
     let targettedNodeTwo = document.querySelector("body");
-    targettedNodeTwo.insertAdjacentHTML('afterend', ' <style>header#page-header-wrapper {background: linear-gradient(to right, #490f59, #a9224f);}.adminModeText{font-weight:bold;}</style>');
+    targettedNodeTwo.insertAdjacentHTML('afterend', ' <style>header#page-header-wrapper {background: linear-gradient(to right, #490f59, #a9224f);}.adminModeText{font-weight:bold; .domAdmin {linear-gradient(to right, #490f59, #a9224f)}}</style>');
 
     // Note stating it is admin mode
     let targettedNode = document.querySelector("#logocontainer");
