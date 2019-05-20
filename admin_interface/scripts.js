@@ -84,8 +84,6 @@ function importGradeScripts() {
         gradeScript.type = 'text/javascript';
         document.getElementsByTagName('body')[0].appendChild(gradeScript);
     }
-
-
 }
 
 /*
