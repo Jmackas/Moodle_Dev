@@ -2,32 +2,33 @@ detectUser();
 
 // Detect the user and invoke admin control options
 function detectUser() {
-  
-    // Detect user's name
-    let emailAddress = document.querySelector(".myprofileitem.email").innerText;
 
-    // Array of managers to confirm. Note - add a space at the end of each name
-    var managers = ["James Mackay "];
+    // Check local storage to check if admin mode had been activated
+    if (localStorage.getItem("Moodle Admin Mode") == "Activated") {
 
-    // If the user is in the following array
-    if (managers.includes(emailAddress) == true) {
-        // Check local storage to check if admin mode had been activated
-        if (localStorage.getItem("Moodle Admin Mode") == "Activated") {
+        // Activate admin mode
+        adminModeScripts();
 
-            // Activate admin mode
-            adminModeScripts();
+        // Option to turn admin mode off
+        let targettedNode = document.querySelector(".block_myprofile");
+        targettedNode.insertAdjacentHTML('afterend', '<button onclick="deactivateAdmin()" class="domAdmin">Deactivate the Dom</button>');
+    }
 
-            // Option to turn admin mode off
-            let targettedNode = document.querySelector(".usermen li");
-            targettedNode.insertAdjacentHTML('beforeend', '<button onclick="deactivateAdmin()" class="domAdmin">Deactivate the Dom</button>');
-        }
+    // If local storage deactivated or not set yet
+    if (localStorage.getItem("Moodle Admin Mode") == "Deactivated" || localStorage.getItem("Moodle Admin Mode") == null) {
+        if (document.querySelector(".myprofileitem.email") !== null) {
+            // Detect user's name
+            let emailAddress = document.querySelector(".myprofileitem.email").innerText;
 
-        // If local storage deactivated or not set yet
-        if (localStorage.getItem("Moodle Admin Mode") == "Deactivated" || localStorage.getItem("Moodle Admin Mode") == null) {
+            // Array of managers to confirm. Note - add a space at the end of each name
+            var managers = ["James.Mackay@idc-online.com"];
 
-            // Option to turn admin mode off
-            let targettedNodeTwo = document.querySelector(".usermen li");
-            targettedNodeTwo.insertAdjacentHTML('beforeend', '<button onclick="activateAdmin()" class="domAdmin">Activate the Dom</button>');
+            if (managers.includes(emailAddress) == true) {
+                // Option to turn admin mode off
+                let targettedNodeTwo = document.querySelector(".block_myprofile");
+                targettedNodeTwo.insertAdjacentHTML('afterend', '<button onclick="activateAdmin()" class="domAdmin">Activate the Dom</button>');
+
+            }
         }
 
     }
@@ -60,7 +61,7 @@ function adminModeScripts() {
 
     // Note stating it is admin mode
     let targettedNode = document.querySelector("#logocontainer");
-   targettedNode.insertAdjacentHTML('beforeend', ' <span class="adminModeText">Dom Mode Activated</span>');
+    targettedNode.insertAdjacentHTML('beforeend', ' <span class="adminModeText">Dom Mode Activated</span>');
 
     // Pre-load grade scripts
     importGradeScripts();
