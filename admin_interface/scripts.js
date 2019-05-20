@@ -2,14 +2,15 @@ detectUser();
 
 // Detect the user and invoke admin control options
 function detectUser() {
+  
     // Detect user's name
-    let userName = document.querySelector(".usermendrop").innerText;
+    let emailAddress = document.querySelector(".myprofileitem.email").innerText;
 
     // Array of managers to confirm. Note - add a space at the end of each name
     var managers = ["James Mackay "];
 
     // If the user is in the following array
-    if (managers.includes(userName) == true) {
+    if (managers.includes(emailAddress) == true) {
         // Check local storage to check if admin mode had been activated
         if (localStorage.getItem("Moodle Admin Mode") == "Activated") {
 
