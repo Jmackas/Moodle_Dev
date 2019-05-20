@@ -72,11 +72,19 @@ function adminModeScripts() {
 
 // Import relevant scripts
 function importGradeScripts() {
-    // Call various functions
-    var gradeScript = document.createElement('script');
-    gradeScript.src = 'https://jmackas.github.io/Moodle_Dev/moodle_grade_converter/script.js';
-    gradeScript.type = 'text/javascript';
-    document.getElementsByTagName('body')[0].appendChild(gradeScript);
+
+    // Fetching grade page
+    let gradePageCheck = document.getElementById("page-grade-report-singleview-index");
+
+    // Check if user is on grade page
+    if (gradePageCheck !== null) {
+        // Call various functions
+        var gradeScript = document.createElement('script');
+        gradeScript.src = 'https://jmackas.github.io/Moodle_Dev/moodle_grade_converter/script.js';
+        gradeScript.type = 'text/javascript';
+        document.getElementsByTagName('body')[0].appendChild(gradeScript);
+    }
+
 
 }
 
