@@ -24,7 +24,7 @@ function detectUser() {
             let emailAddress = document.querySelector(".myprofileitem.email").innerText;
 
             // Array of managers to confirm. Note - add a space at the end of each name
-            var managers = ["jacqui.veness@eit.edu.au","Indumathi.v@eit.edu.au","angie.tran@eit.edu.au","james.theodosiadis@eit.edu.au","Danielle.Techera@idc-online.com","Steve.steyn@eit.edu.au","Lucy.Smith@idc-online.com","milind.siddhpura@eit.edu.au","isabel@idc-online.co.za","tulsi.shastri@eit.edu.au","edwina@idc-online.com","Luzette@idc-online.co.za","sisipho@idc-online.co.za","accounts@idc-online.co.za","cpakamisa@gmail.com.za","Emily.ONeil@idc-online.com","miriam.munitz@eit.edu.au","kieran@truss.io","tech@idc-online.com","James.Mackay@idc-online.com","caroline.mackay@eit.edu.au","kim.li@idc-online.com","Megan.Kellett@eit.edu.au","virginia.howard@eit.edu.au","allison.gray@eit.edu.au","david.gajdus@eit.edu.au","jason.gabriel@eit.edu.au","Logan.Frost@idc-online.com","yuanyuan.fan@eit.edu.au","natalie.holland@eit.edu.au","renee.clarke@eit.edu.au","lisa.chisari@idc-online.com","paul.celenza@eit.edu.au","Sharon.Bowler@eit.edu.au","hello@danielboterhoven.tech","thelma@idc-online.co.za","carolina@idc-online.com","support@truss.io","holly.adams@eit.edu.au","holly.adams@eit.edu.au"];
+            var managers = ["jacqui.veness@eit.edu.au", "Indumathi.v@eit.edu.au", "angie.tran@eit.edu.au", "james.theodosiadis@eit.edu.au", "Danielle.Techera@idc-online.com", "Steve.steyn@eit.edu.au", "Lucy.Smith@idc-online.com", "milind.siddhpura@eit.edu.au", "isabel@idc-online.co.za", "tulsi.shastri@eit.edu.au", "edwina@idc-online.com", "Luzette@idc-online.co.za", "sisipho@idc-online.co.za", "accounts@idc-online.co.za", "cpakamisa@gmail.com.za", "Emily.ONeil@idc-online.com", "miriam.munitz@eit.edu.au", "kieran@truss.io", "tech@idc-online.com", "James.Mackay@idc-online.com", "caroline.mackay@eit.edu.au", "kim.li@idc-online.com", "Megan.Kellett@eit.edu.au", "virginia.howard@eit.edu.au", "allison.gray@eit.edu.au", "david.gajdus@eit.edu.au", "jason.gabriel@eit.edu.au", "Logan.Frost@idc-online.com", "yuanyuan.fan@eit.edu.au", "natalie.holland@eit.edu.au", "renee.clarke@eit.edu.au", "lisa.chisari@idc-online.com", "paul.celenza@eit.edu.au", "Sharon.Bowler@eit.edu.au", "hello@danielboterhoven.tech", "thelma@idc-online.co.za", "carolina@idc-online.com", "support@truss.io", "holly.adams@eit.edu.au", "holly.adams@eit.edu.au"];
 
             if (managers.includes(emailAddress) == true) {
                 // Option to turn admin mode off
@@ -68,9 +68,12 @@ function adminModeScripts() {
 
     // Pre-load grade scripts
     importGradeScripts();
+
+    // Pre-load sort scripts
+    importSortScripts()
 }
 
-// Import relevant scripts
+// Import grade function scripts
 function importGradeScripts() {
 
     // Fetching grade page
@@ -81,6 +84,21 @@ function importGradeScripts() {
         // Call various functions
         var gradeScript = document.createElement('script');
         gradeScript.src = 'https://jmackas.github.io/Moodle_Dev/moodle_grade_converter/script.js';
+        gradeScript.type = 'text/javascript';
+        document.getElementsByTagName('body')[0].appendChild(gradeScript);
+    }
+}
+
+// Import sort function scripts
+function importSortScripts() {
+    // Fetching grade page
+    let gradePageCheck = document.getElementById("page-grade-report-overview-index");
+
+    // Check if user is on grade page
+    if (gradePageCheck !== null) {
+        // Call various functions
+        var gradeScript = document.createElement('script');
+        gradeScript.src = 'https://jmackas.github.io/Moodle_Dev/moodle_dropdown_sort/scripts.js';
         gradeScript.type = 'text/javascript';
         document.getElementsByTagName('body')[0].appendChild(gradeScript);
     }
