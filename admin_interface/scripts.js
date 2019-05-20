@@ -12,7 +12,7 @@ function detectUser() {
         // Option to turn admin mode off
         if (document.querySelector(".myprofileitem.email") !== null) {
             let targettedNode = document.querySelector(".block_myprofile");
-            targettedNode.insertAdjacentHTML('afterend', '<button onclick="deactivateAdmin()" class="domAdmin">Deactivate the Dom</button>');
+            targettedNode.insertAdjacentHTML('afterend', '<button onclick="deactivateAdmin()" class="domAdmin">Deactivate the DOM</button>');
         }
 
     }
@@ -31,7 +31,7 @@ function detectUser() {
             if (managers.includes(emailAddress) == true) {
                 // Option to turn admin mode off
                 let targettedNodeTwo = document.querySelector(".block_myprofile");
-                targettedNodeTwo.insertAdjacentHTML('afterend', '<button onclick="activateAdmin()" class="domAdmin">Activate the Dom</button>');
+                targettedNodeTwo.insertAdjacentHTML('afterend', '<button onclick="activateAdmin()" class="domAdmin">Activate the DOM</button>');
 
             }
         }
