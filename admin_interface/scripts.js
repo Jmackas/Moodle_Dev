@@ -90,16 +90,22 @@ function importGradeScripts() {
 
 TRY AJAX
 
-function loadDoc() {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("maincontent").innerHTML =
-      this.responseText;
+loadXMLDoc();
+
+function loadXMLDoc(manager) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            manager = this.responseText;
+
+            console.log(manager);
+
+            ;
+        }
     }
-  };
-  xhttp.open("GET", "https://jmackas.github.io/Scope-Systems/", true);
-  xhttp.send();
+    ;
+    xhttp.open("GET", "https://jmackas.github.io/Moodle_Dev/admin_interface/managers.txt", true);
+    xhttp.send();
 }
 
 
