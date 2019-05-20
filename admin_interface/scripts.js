@@ -10,8 +10,11 @@ function detectUser() {
         adminModeScripts();
 
         // Option to turn admin mode off
-        let targettedNode = document.querySelector(".block_myprofile");
-        targettedNode.insertAdjacentHTML('afterend', '<button onclick="deactivateAdmin()" class="domAdmin">Deactivate the Dom</button>');
+        if (document.querySelector(".myprofileitem.email") !== null) {
+            let targettedNode = document.querySelector(".block_myprofile");
+            targettedNode.insertAdjacentHTML('afterend', '<button onclick="deactivateAdmin()" class="domAdmin">Deactivate the Dom</button>');
+        }
+
     }
 
     // If local storage deactivated or not set yet
