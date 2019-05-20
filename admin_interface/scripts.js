@@ -55,7 +55,7 @@ function adminModeScripts() {
 
     // Temp stylesheet
     let targettedNodeTwo = document.querySelector("body");
-    targettedNodeTwo.insertAdjacentHTML('afterend', ' <style>header#page-header-wrapper {background: linear-gradient(to right, #490f59, #a9224f);}.adminModeText{font-weight:bold; .domAdmin {linear-gradient(to right, #490f59, #a9224f)}}</style>');
+    targettedNodeTwo.insertAdjacentHTML('afterend', ' <style>header#page-header-wrapper {background: linear-gradient(to right, #490f59, #a9224f);}.adminModeText{font-weight:bold;}</style>');
 
     // Note stating it is admin mode
     let targettedNode = document.querySelector("#logocontainer");
