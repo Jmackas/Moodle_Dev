@@ -26,7 +26,7 @@ function detectUser() {
 
             // Option to turn admin mode off
             let targettedNodeTwo = document.querySelector(".usermen li");
-            targettedNodeTwo.insertAdjacentHTML('beforeend', '<button onclick="activateAdmin()">Activate the Dom</button>');
+            targettedNodeTwo.insertAdjacentHTML('beforeend', '<button onclick="activateAdmin()" class="domAdmin">Activate the Dom</button>');
         }
 
     }
