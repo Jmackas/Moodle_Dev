@@ -4,17 +4,11 @@ invokeSort();
 
 // Check if the grades module is active
 function invokeSort() {
-    // Fetching grade page
-    let gradePageCheck = document.getElementById("page-grade-report-overview-index");
 
-    // Check if user is on grade page
-    if (gradePageCheck !== null) {
         let entireDoc = document.getElementById('graded_users_selector');
         entireDoc.insertAdjacentHTML('afterend', '<button onclick="sortListAlph()" class="bttn">Sort First Name</button>');
         entireDoc.insertAdjacentHTML('afterend', '<br>');
 
-        //sortlist();
-    }
 }
 
 // Sort function
