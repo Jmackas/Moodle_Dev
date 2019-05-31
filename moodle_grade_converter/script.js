@@ -3,9 +3,8 @@ extensionInterface();
 
 function extensionInterface() {
 
-
     let entireDoc = document.querySelector('body');
-    entireDoc.insertAdjacentHTML('beforebegin', '<div class="adminPanel"><button onclick="confirmationCheck()" class="extensionButton">Check Fields to be Changed</button> <br> <button onclick="gradeCorrector()" class="extensionButton">Overwrite Changes</button></div>');
+    entireDoc.insertAdjacentHTML('beforebegin', '<div class="adminPanel"><button onclick="confirmationCheck()" class="extensionButton checkData">Check Fields to be Changed</button><button onclick="gradeCorrector()" class="extensionButton overwriteData" style="display: none;">Overwrite Changes</button></div>');
 
 }
 
@@ -22,6 +21,8 @@ function confirmationCheck() {
         fieldsToBeChanged[i].style.backgroundColor = "red";
         fieldsToBeChanged[i].style.color = "white";
     }
+
+    document.querySelector("body").insertAdjacentHTML('afterend', '<style>.overwriteData {display: block !important;} .checkData {display: none !important;}</style>');
 }
 
 // Function to start the algorithm
