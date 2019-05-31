@@ -66,6 +66,9 @@ function adminModeScripts() {
     let targettedNode = document.querySelector("#logocontainer");
     targettedNode.insertAdjacentHTML('beforeend', ' <span class="adminModeText">Dom Mode Activated</span>');
 
+    // Import relevant styles
+    document.querySelector("body").insertAdjacentHTML('beforeend', '<style>.adminPanel {background: linear-gradient(to right, #490f59, #a9224f);}</style>');
+
     // Pre-load grade scripts
     importGradeScripts();
 
