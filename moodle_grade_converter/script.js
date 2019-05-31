@@ -5,7 +5,7 @@ function extensionInterface() {
 
 
     let entireDoc = document.querySelector('body');
-    entireDoc.insertAdjacentHTML('beforebegin', '<button onclick="confirmationCheck()" class="extensionButton">Check Fields to be Changed</button> <br> <button onclick="gradeCorrector()" class="extensionButton" style="top: 40px;" >Overwrite Changes</button>');
+    entireDoc.insertAdjacentHTML('beforebegin', '<div class="adminPanel"><button onclick="confirmationCheck()" class="extensionButton">Check Fields to be Changed</button> <br> <button onclick="gradeCorrector()" class="extensionButton">Overwrite Changes</button></div>');
 
 }
 
