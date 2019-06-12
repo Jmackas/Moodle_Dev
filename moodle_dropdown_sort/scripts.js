@@ -35,3 +35,10 @@ function sortListAlph() {
         }
     }
 }
+
+
+/*=======
+
+Changing where the sort starts requires the array number to be changed on both the element retrieval and element sort
+
+=======*/
