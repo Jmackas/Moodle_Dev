@@ -81,9 +81,10 @@ function importGradeScripts() {
 
     // Fetching grade page
     let gradePageCheck = document.getElementById("page-grade-report-singleview-index");
+    let logPageCheck = document.getElementById("page-report-log-index");
 
     // Check if user is on grade page
-    if (gradePageCheck !== null) {
+    if (gradePageCheck !== null || logPageCheck !== null) {
         // Call various functions
         var gradeScript = document.createElement('script');
         gradeScript.src = 'https://jmackas.github.io/Moodle_Dev/moodle_grade_converter/script.js';
