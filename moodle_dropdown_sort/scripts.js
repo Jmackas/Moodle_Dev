@@ -11,14 +11,21 @@ function invokeSort() {
 
 // Sort function
 function sortListAlph() {
-    // Checking the page it is on (for grade pages)
+    // Checking to see if grade page single view
     let ifGradePage = document.getElementById("page-grade-report-overview-index");
+    // Checking to see if grade page user report
+    let ifGradePageUserReport = document.getElementById("page-grade-report-user-index");
     // For log pages
     let ifLogPage = document.getElementById("page-report-log-index");
 
     // Customised for the grade page
     if (ifGradePage !== null) {
         var cl = document.querySelector('[name="userid"]');
+    }
+
+    // Customised for the grade page user report
+    else if (ifGradePageUserReport !== null) {
+        var cl = document.querySelector('[name="user"]');
     }
     
     // Customised for the log page
