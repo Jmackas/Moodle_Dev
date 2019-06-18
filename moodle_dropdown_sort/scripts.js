@@ -12,7 +12,7 @@ function invokeSort() {
 // Sort function
 function sortListAlph() {
     // Checking the page it is on
-    let ifGradePage = document.getElementById("page-grade-report-singleview-index");
+    let ifGradePage = document.getElementById("page-grade-report-overview-index");
     let ifLogPage = document.getElementById("page-report-log-index");
 
     // Customised for the grade page
