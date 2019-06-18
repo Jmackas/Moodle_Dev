@@ -25,7 +25,7 @@ function sortListAlph() {
 
     // Customised for the grade page user report
     else if (ifGradePageUserReport !== null) {
-        var cl = document.querySelector('[name="user"]');
+        var cl = document.querySelector('[name="userid"]');
     }
     
     // Customised for the log page
