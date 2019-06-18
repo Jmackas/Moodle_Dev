@@ -11,8 +11,9 @@ function invokeSort() {
 
 // Sort function
 function sortListAlph() {
-    // Checking the page it is on
+    // Checking the page it is on (for grade pages)
     let ifGradePage = document.getElementById("page-grade-report-overview-index");
+    // For log pages
     let ifLogPage = document.getElementById("page-report-log-index");
 
     // Customised for the grade page
