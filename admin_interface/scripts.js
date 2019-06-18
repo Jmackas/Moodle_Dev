@@ -96,10 +96,14 @@ function importGradeScripts() {
 function importSortScripts() {
     // Fetching grade page
     let gradePageCheck = document.getElementById("page-grade-report-overview-index");
+    // Fetching the log page
     let logPageCheck = document.getElementById("page-report-log-index");
+    // Fetching the grade page - single view
+    let gradePageSingleViewCheck = document.getElementById("page-grade-report-user-index");
+
 
     // Check if user is on grade page
-    if (gradePageCheck !== null || logPageCheck !== null) {
+    if (gradePageCheck !== null || logPageCheck !== null || gradePageSingleViewCheck !== null) {
         // Call various functions
         var gradeScript = document.createElement('script');
         gradeScript.src = 'https://jmackas.github.io/Moodle_Dev/moodle_dropdown_sort/scripts.js';
