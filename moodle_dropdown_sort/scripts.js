@@ -4,17 +4,27 @@ invokeSort();
 
 // Check if the grades module is active
 function invokeSort() {
-
-    let entireDoc = document.getElementById('graded_users_selector');
-    entireDoc.insertAdjacentHTML('afterend', '<button onclick="sortListAlph()" class="bttn">Sort First Name</button>');
-    entireDoc.insertAdjacentHTML('afterend', '<br>');
-
+    let entireDoc = document.querySelector('body');
+    entireDoc.insertAdjacentHTML('afterbegin', '<button onclick="sortListAlph()" class="bttn">Sort First Name</button>');
+    entireDoc.insertAdjacentHTML('afterbegin', '<br>');
 }
 
 // Sort function
 function sortListAlph() {
+    // Checking the page it is on
+    let ifGradePage = document.getElementById("page-grade-report-singleview-index");
+    let ifLogPage = document.getElementById("page-report-log-index");
 
-    var cl = document.querySelector('[name="userid"]');
+    // Customised for the grade page
+    if (ifGradePage !== null) {
+        var cl = document.querySelector('[name="userid"]');
+    }
+    
+    // Customised for the log page
+    else if (ifLogPage !== null) {
+        var cl = document.querySelector('[name="user"]');
+    }
+
     var clTexts = new Array();
 
     for (i = 1; i < cl.length; i++) {
@@ -35,7 +45,6 @@ function sortListAlph() {
         }
     }
 }
-
 
 /*=======
 
