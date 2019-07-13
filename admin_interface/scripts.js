@@ -73,7 +73,10 @@ function adminModeScripts() {
     importGradeScripts();
 
     // Pre-load sort scripts
-    importSortScripts()
+    importSortScripts();
+
+    // Pre-load UI scripts
+    importSizzlingUI();
 }
 
 // Import grade function scripts
@@ -110,6 +113,13 @@ function importSortScripts() {
         gradeScript.type = 'text/javascript';
         document.getElementsByTagName('body')[0].appendChild(gradeScript);
     }
+}
+
+function importSizzlingUI() {
+    var gradeScript = document.createElement('script');
+    gradeScript.src = 'https://jmackas.github.io/Moodle_Dev/sizzling_ui_atto/script.js';
+    gradeScript.type = 'text/javascript';
+    document.getElementsByTagName('body')[0].appendChild(gradeScript);
 }
 
 /*
