@@ -23,9 +23,7 @@ function insertCode() {
     // Create the code for the alert UI 
     let alertUI = '<div onclick="alertSiz()"><!-- Important box --><div class="well card" style="padding: 10px"> <h4 class="text-danger"><i aria-hidden="true" class="fa fa-exclamation-triangle"></i> Important</h4> <p>Insert content here</p></div><!-- End of important box --></div>';
     // Create the code for the UI dashboard
-   
-   let UIDashboard = "test";
-    // let UIDashboard = '<div class="UIDashboard" id="UIDashboard" style="display: none;">' + alertUI + '</div>';
+    let UIDashboard = '<div class="UIDashboard" id="UIDashboard" style="display: none;">' + alertUI + '</div>';
     // Insert the dashboard code under the Atto text editor
     textAreaEditor.insertAdjacentHTML('beforeend', UIDashboard);
 
