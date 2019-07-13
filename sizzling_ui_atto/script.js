@@ -19,7 +19,7 @@ document.querySelector(".atto_html_button").addEventListener("click", function()
 // The code that contains the sizzling UI elements
 function insertCode() {
     // Target the atto editor text area
-    let textAreaEditor = document.querySelector(".editor_atto_wrap");
+    let textAreaEditor = document.querySelector("body");
     // Create the code for the alert UI 
     let alertUI = '<div onclick="alertSiz()"><!-- Important box --><div class="well card" style="padding: 10px"> <h4 class="text-danger"><i aria-hidden="true" class="fa fa-exclamation-triangle"></i> Important</h4> <p>Insert content here</p></div><!-- End of important box --></div>';
     // Create the code for the UI dashboard
