@@ -76,7 +76,7 @@ function adminModeScripts() {
     importSortScripts();
 
     // Pre-load UI scripts
-    importSizzlingUI();
+   // importSizzlingUI();
 }
 
 // Import grade function scripts
