@@ -1,5 +1,5 @@
 
-setTimeout(myFunction, 1000);
+setTimeout(myFunction, 3000);
 
 function myFunction() {
     insertCode();
