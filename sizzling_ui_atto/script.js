@@ -1,7 +1,11 @@
-setTimeout(myFunction, 1000);
+setTimeout(attoEditorSiz, 1000);
 
-function myFunction() {
-    sizzlingUI();
+function attoEditorSiz() {
+    // Checking atto editor exists on page
+    let attoeditorcheck = document.querySelector(".editor_atto_wrap");
+    if (attoeditorcheck !== null) {
+        sizzlingUI();
+    }
 }
 
 function sizzlingUI() {
@@ -41,8 +45,8 @@ function sizzlingUI() {
 
 }
 
-    // Insert the alert code into the editor
-    function alertSiz() {
-        let alertUI = '<!-- Important box --><div class="well card" style="padding: 10px"> <h4 class="text-danger"><i aria-hidden="true" class="fa fa-exclamation-triangle"></i> Important</h4> <p>Insert content here</p></div><!-- End of important box -->';
-        document.querySelector('#id_introeditor').value += alertUI;
-    }
+// Insert the alert code into the editor
+function alertSiz() {
+    let alertUI = '<!-- Important box --><div class="well card" style="padding: 10px"> <h4 class="text-danger"><i aria-hidden="true" class="fa fa-exclamation-triangle"></i> Important</h4> <p>Insert content here</p></div><!-- End of important box -->';
+    document.querySelector('#id_introeditor').value += alertUI;
+}
