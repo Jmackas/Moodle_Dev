@@ -37,10 +37,12 @@ function sizzlingUI() {
 
     }
 
+
+
+}
+
     // Insert the alert code into the editor
     function alertSiz() {
         let alertUI = '<!-- Important box --><div class="well card" style="padding: 10px"> <h4 class="text-danger"><i aria-hidden="true" class="fa fa-exclamation-triangle"></i> Important</h4> <p>Insert content here</p></div><!-- End of important box -->';
         document.querySelector('#id_introeditor').value += alertUI;
     }
-
-}
