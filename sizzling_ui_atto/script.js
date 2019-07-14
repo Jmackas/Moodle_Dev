@@ -1,4 +1,4 @@
-setTimeout(myFunction, 3000);
+setTimeout(myFunction, 1000);
 
 function myFunction() {
     sizzlingUI();
