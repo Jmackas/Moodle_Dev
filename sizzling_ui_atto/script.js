@@ -1,4 +1,11 @@
-insertCode();
+
+setTimeout(myFunction, 1000);
+
+function myFunction() {
+    insertCode();
+}
+
+
 
 // Event listener to check if the user has invoked code mode
 document.querySelector(".atto_html_button").addEventListener("click", function() {
